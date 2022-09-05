@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Index from './routes/Index'
+import StatuesBar from './components/StatuesBar'
+import './styles.css'
+import Friends from './View/Friends'
 
 function App() {
   return (
-    <Router>
-      <Route>
-        <Index />
-      </Route>
-    </Router>
+    <>
+      <Friends />
+    </>
   )
 }
 
