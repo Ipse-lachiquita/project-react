@@ -1,27 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faGear,
-  faMagnifyingGlass,
-  faMusic,
-} from '@fortawesome/free-solid-svg-icons'
+import HeaderIcon from '../components/HeaderIcon'
+import HeaderTitle from '../components/HeaderTitle'
+import magnifierHover from '../images/magnifierHover.png'
+import music from '../images/music.png'
+import settings from '../images/settings.png'
 
 function HeaderFriends() {
   return (
     <Header>
-      <Title>Friends</Title>
-      <IconWrap>
-        <Icon>
-          <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-        </Icon>
-        <Icon>
-          <FontAwesomeIcon icon={faMusic} size="lg" />
-        </Icon>
-        <Icon>
-          <FontAwesomeIcon icon={faGear} size="lg" />
-        </Icon>
-      </IconWrap>
+      <HeaderTitle title="Friends" />
+      <Wrap>
+        <HeaderIcon src={magnifierHover} />
+        <HeaderIcon src={music} />
+        <HeaderIcon src={settings} />
+      </Wrap>
     </Header>
   )
 }
@@ -33,14 +26,6 @@ const Header = styled.header`
   padding: var(--horizontal-space);
   margin-bottom: 15px;
 `
-const Title = styled.h1`
-  font-size: 32px;
-  font-weight: 600;
-`
-const IconWrap = styled.div``
-
-const Icon = styled.span`
-  margin-left: 20px;
-`
+const Wrap = styled.div``
 
 export default HeaderFriends

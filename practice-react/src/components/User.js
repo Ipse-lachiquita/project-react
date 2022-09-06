@@ -1,54 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
+import UserName from './UserName'
+import UserImg from './UserImg'
 
-function User(height, width) {
+function User(props) {
   return (
-    <MainScreen>
-      <UserWrap>
-        <UserColumn>
-          <Image
-            src="https://avatars3.githubusercontent.com/u/3612017"
-            height={height}
-            width={width}
-          />
-          <UserText>
-            <UserTitle>Nicolas</UserTitle>
-          </UserText>
-        </UserColumn>
-      </UserWrap>
-    </MainScreen>
+    <Wrap>
+      <Column>
+        <UserImg
+          src={props.src}
+          height={props.height}
+          width={props.width}
+          radius={props.radius}
+        />
+        <UserName weight={600} title="Han" />
+      </Column>
+    </Wrap>
   )
 }
 
-const MainScreen = styled.main`
-  padding: 0px var(--horizontal-space);
-`
-const UserWrap = styled.div`
+const Wrap = styled.div`
   justify-content: space-between;
-  display: flex;
-  align-items: center;
 `
 
 const Image = styled.img`
-
-  width: ${(props) => props.width}
-  height: ${(props) => props.height}
-  border-radius: 30px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  border-radius: ${(props) => props.radius};
   margin-right: 20px;
 `
 
-const UserColumn = styled.div`
-  &: first-child {
+const Column = styled.div`
+  &:first-child {
     display: flex;
     align-items: center;
   }
-`
-
-const UserText = styled.div``
-
-const UserTitle = styled.h4`
-  font-weight: 600;
-  font-size: 22px;
 `
 
 export default User

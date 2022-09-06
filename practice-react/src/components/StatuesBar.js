@@ -10,18 +10,18 @@ import {
 function StatuesBar() {
   return (
     <StatusBar>
-      <StatusBarColumn>
+      <Column>
         <span>No service</span>
         <FontAwesomeIcon icon={faWifi} />
-      </StatusBarColumn>
-      <StatusBarColumn>
+      </Column>
+      <Column>
         <span>18:43</span>
-      </StatusBarColumn>
-      <StatusBarColumn>
+      </Column>
+      <Column>
         <span>100%</span>
         <FontAwesomeIcon className="battery" icon={faBatteryFull} size="lg" />
         <FontAwesomeIcon icon={faBoltLightning} />
-      </StatusBarColumn>
+      </Column>
     </StatusBar>
   )
 }
@@ -31,7 +31,7 @@ const StatusBar = styled.div`
   justify-content: center;
   padding: 5px 3px;
 `
-const StatusBarColumn = styled.div`
+const Column = styled.div`
   width: 33%;
   &:nth-child(2) {
     display: flex;
