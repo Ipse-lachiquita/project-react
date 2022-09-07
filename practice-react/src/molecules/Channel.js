@@ -2,18 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import User from './User'
+import UserImg from '../atoms/UserImg'
+import UserName from '../atoms/UserName'
+import macLogo from '../images/macLogo.png'
+
 function Channel() {
   return (
     <Wrap>
-      <User
-        height="60px"
-        width="60px"
-        radius="25px"
-        titleName="Channel"
-        src="https://avatars3.githubusercontent.com/u/3612017"
-        weight="400"
-      />
+      <UserWrap>
+        <UserColumn>
+          <UserImg src={macLogo} height="60px" width="60px" radius="25px" />
+          <UserName weight={400} title="McDonald's" />
+        </UserColumn>
+      </UserWrap>
       <Column>
         <Count>2</Count>
         <FontAwesomeIcon icon={faChevronRight} size="xs" />
@@ -34,5 +35,16 @@ const Column = styled.div`
 `
 const Count = styled.span`
   margin-right: 3px;
+`
+
+const UserWrap = styled.div`
+  justify-content: space-between;
+`
+
+const UserColumn = styled.div`
+  &:first-child {
+    display: flex;
+    align-items: center;
+  }
 `
 export default Channel

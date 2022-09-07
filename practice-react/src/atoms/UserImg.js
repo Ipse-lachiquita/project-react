@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 function UserImg(props) {
+  console.log(props.radius)
   return (
     <Image
       src={props.src}

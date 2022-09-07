@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import NavIcon from '../components/NavIcon'
+import NavIcon from './NavIcon'
 import userHover from '../images/userHover.png'
 import comment from '../images/comment.png'
 import magnifier from '../images/magnifier.png'
