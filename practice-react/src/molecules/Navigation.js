@@ -1,19 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import NavIcon from '../atoms/NavIcon'
-import userHover from '../images/userHover.png'
-import comment from '../images/comment.png'
-import magnifier from '../images/magnifier.png'
-import option from '../images/option.png'
+import { useNavigate } from 'react-router-dom'
 
 function Navigation() {
+  let navigate = useNavigate()
+
   return (
     <Wrap>
       <List>
-        <NavIcon src={userHover} />
-        <NavIcon src={comment} />
-        <NavIcon src={magnifier} />
-        <NavIcon src={option} />
+        <NavIcon src={user} to="/Friends" />
+        <NavIcon src={comment} to="/Chats" />
+        <NavIcon src={magnifier} to="/Find" />
+        <NavIcon src={option} to="/More" />
       </List>
     </Wrap>
   )

@@ -9,7 +9,6 @@ import ButtonLink from '../molecules/ButtonLink'
 function Login() {
   return (
     <>
-      <StatuesBar />
       <HeaderLogin
         title="Welcome to Kokoa Clone"
         text="If you have a Kokoa Account, log in with your email or phone number."

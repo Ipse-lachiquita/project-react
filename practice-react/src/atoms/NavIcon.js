@@ -4,9 +4,9 @@ import styled from 'styled-components'
 function NavIcon(props) {
   return (
     <List>
-      <Link>
+      <Div onClick={props.onClick}>
         <Image src={props.src} />
-      </Link>
+      </Div>
     </List>
   )
 }
@@ -16,10 +16,7 @@ const List = styled.li`
   justify-content: space-between;
 `
 
-const Link = styled.a`
-  position: relative;
-  color: #2e353e;
-`
+const Div = styled.div``
 
 const Image = styled.img`
   height: 32px;

@@ -5,15 +5,17 @@ import userHover from '../images/userHover.png'
 import comment from '../images/comment.png'
 import magnifier from '../images/magnifier.png'
 import option from '../images/option.png'
+import { useNavigate } from 'react-router-dom'
 
 function Navigation() {
+  let navigation = useNavigate()
   return (
     <Wrap>
       <List>
-        <NavIcon src={userHover} />
-        <NavIcon src={comment} />
-        <NavIcon src={magnifier} />
-        <NavIcon src={option} />
+        <NavIcon src={userHover} onClick={() => navigation('/Friends')} />
+        <NavIcon src={comment} onClick={() => navigation('/Chats')} />
+        <NavIcon src={magnifier} onClick={() => navigation('/Find')} />
+        <NavIcon src={option} onClick={() => navigation('/More')} />
       </List>
     </Wrap>
   )
@@ -33,5 +35,5 @@ const List = styled.ul`
   display: flex;
   justify-content: space-between;
 `
-
+const Div = styled.div``
 export default Navigation

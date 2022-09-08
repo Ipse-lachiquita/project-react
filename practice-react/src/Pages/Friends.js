@@ -1,5 +1,4 @@
 import React from 'react'
-import StatuesBar from '../atoms/StatuesBar'
 import HeaderFriends from '../molecules/HeaderFriends'
 import DisplayFriendLink from '../atoms/DisplayFriendLink'
 import User from '../molecules/User'
@@ -11,7 +10,6 @@ import Channel from '../molecules/Channel'
 function Friends() {
   return (
     <>
-      <StatuesBar />
       <HeaderFriends />
       <DisplayFriendLink />
       <Screen>
